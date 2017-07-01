@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Gardnr</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="survey_exp">Do you have any experience with growing plants?</string>
+    <string-array name="survey_exp_items">
+        <item>No</item>
+        <item>1 to 3 years</item>
+        <item>More than three years</item>
+    </string-array>
+    <string name="survey_type">What type of plant do you want?</string>
+    <string-array name="survey_type_items">
+        <item>Herbs</item>
+        <item>Succulents</item>
+        <item>House Plants</item>
+        <item>Fruit Bearing Plants</item>
+        <item>Vegetables</item>
+    </string-array>
+    <string name="survey_where">Where are you planning to place your plant?</string>
+    <string-array name="survey_where_items">
+        <item>Backyard</item>
+        <item>Balcony</item>
+        <item>Indors</item>
+        <item>Rooftop</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
