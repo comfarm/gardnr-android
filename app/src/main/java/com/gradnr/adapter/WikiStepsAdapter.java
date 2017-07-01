@@ -16,7 +16,6 @@ import com.gradnr.R;
 import com.gradnr.activity.WikiActivity;
 import com.gradnr.dto.StepsDTO;
 import com.gradnr.dto.WikiDTO;
-import com.gradnr.fragment.WikiStepsFragment;
 import com.gradnr.util.StepsHolder;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.adapter.AbstractFragmentStepAdapter;
@@ -81,7 +80,7 @@ public class WikiStepsAdapter extends RecyclerView.Adapter<WikiStepsAdapter.View
             Log.d("RecyclerView", "CLICK!");
 
             Context context = itemView.getContext();
-            Intent showStepIntent = new Intent(context, WikiStepsFragment.class);
+            Intent showStepIntent = new Intent(context, WikiActivity.class);
             context.startActivity(showStepIntent);
         }
     }
