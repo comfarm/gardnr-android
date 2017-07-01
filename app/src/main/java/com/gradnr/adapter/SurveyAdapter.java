@@ -25,11 +25,6 @@ public class SurveyAdapter  extends AbstractFragmentStepAdapter {
 
     @Override
     public Step createStep(int position) {
-//        final SurveyStepFragment step = new SurveyStepFragment();
-//        Bundle b = new Bundle();
-//        b.putInt(CURRENT_STEP_POSITION_KEY, position);
-//        step.setArguments(b);
-//        return step;
         switch (position) {
             case 0:
                 return SurveyStepFragment.newInstance(R.layout.fragment_survey_step_exp);

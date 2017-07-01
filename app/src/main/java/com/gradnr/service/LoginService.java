@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginService {
 
-    public static final String BASE_URL = "http://172.16.0.59:8091";
+    public static final String BASE_URL = "http://172.16.0.72:8091";
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -30,6 +30,7 @@ public class LoginService {
             @Override
             public void onResponse(Call<UserDTO> call, Response<UserDTO> response) {
                 code[0] = response.code();
+                Log.d("register", String.valueOf(response.code()));
             }
 
             @Override
