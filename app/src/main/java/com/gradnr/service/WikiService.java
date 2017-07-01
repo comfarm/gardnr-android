@@ -1,6 +1,8 @@
 package com.gradnr.service;
 
-import android.util.Log;
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
 
 import com.gradnr.common.Constants;
 import com.gradnr.dao.UserDao;
@@ -12,16 +14,21 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by LIM on 01/07/2017.
- */
+public class WikiService extends Service {
+    public WikiService() {
+    }
 
-public class LoginService {
+    @Override
+    public IBinder onBind(Intent intent) {
+        // TODO: Return the communication channel to the service.
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build();
+
     public Integer register(UserDTO userDTO){
         final int[] code = new int[1];
         UserDao userDao = retrofit.create(UserDao.class);
@@ -57,5 +64,4 @@ public class LoginService {
         });
         return userDTO;
     }
-
 }

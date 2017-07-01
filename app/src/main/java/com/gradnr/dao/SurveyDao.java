@@ -1,38 +1,21 @@
 package com.gradnr.dao;
 
+import com.gradnr.dto.SurveyDTO;
+import com.gradnr.dto.WikiDTO;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 /**
  * Created by bri on 7/1/17.
  */
 
-public class SurveyDao {
-    private String surveyExp;
-    private ArrayList<String> surveyPlantTypes = new ArrayList<>();
-    private ArrayList<String> surveyPlantPlace = new ArrayList<>();
-
-    public String getSurveyExp() {
-        return surveyExp;
-    }
-
-    public void setSurveyExp(String surveyExp) {
-        this.surveyExp = surveyExp;
-    }
-
-    public ArrayList<String> getSurveyPlantTypes() {
-        return surveyPlantTypes;
-    }
-
-    public void setSurveyPlantTypes(ArrayList<String> surveyPlantTypes) {
-        this.surveyPlantTypes = surveyPlantTypes;
-    }
-
-    public ArrayList<String> getSurveyPlantPlace() {
-        return surveyPlantPlace;
-    }
-
-    public void setSurveyPlantPlace(ArrayList<String> surveyPlantPlace) {
-        this.surveyPlantPlace = surveyPlantPlace;
-    }
+public interface SurveyDao {
+    @POST("survey/")
+    Call<SurveyDTO> getItem(@Body SurveyDTO survey);
 }
