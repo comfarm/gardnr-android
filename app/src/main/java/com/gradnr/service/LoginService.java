@@ -2,6 +2,7 @@ package com.gradnr.service;
 
 import android.util.Log;
 
+import com.gradnr.common.Constants;
 import com.gradnr.dao.UserDao;
 import com.gradnr.dto.UserDTO;
 
@@ -18,8 +19,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class LoginService {
 
     public static final String BASE_URL = "http://172.16.0.72:8091";
+
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build();
     public Integer register(UserDTO userDTO){

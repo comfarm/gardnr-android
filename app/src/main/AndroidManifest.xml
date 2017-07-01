@@ -23,7 +23,15 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".activity.GardnActivity"/>
+        <activity android:name=".activity.GardnActivity" />
+        <activity android:name=".activity.WikiActivity" />
+        <activity android:name=".activity.MilestoneActivity" />
+        <activity android:name=".activity.PlantActivity" />
+
+        <service
+            android:name=".service.WikiService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

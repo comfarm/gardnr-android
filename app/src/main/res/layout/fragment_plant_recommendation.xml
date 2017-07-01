@@ -33,7 +33,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/plant_recommendationList"/>
 
-
         <mehdi.sakout.fancybuttons.FancyButton
             android:id="@+id/plant_later"
             android:layout_width="match_parent"

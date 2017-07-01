@@ -5,6 +5,7 @@
     <string name="survey_exp">Do you have any experience with growing plants?</string>
     <string-array name="survey_exp_items">
         <item>No</item>
+        <item>Less than one year</item>
         <item>1 to 3 years</item>
         <item>More than three years</item>
     </string-array>
@@ -20,7 +21,7 @@
     <string-array name="survey_where_items">
         <item>Backyard</item>
         <item>Balcony</item>
-        <item>Indors</item>
+        <item>Indoors</item>
         <item>Rooftop</item>
     </string-array>
 
