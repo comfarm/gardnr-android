@@ -3,6 +3,7 @@ package com.gradnr.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.util.Log;
 
 import com.gradnr.common.Constants;
 import com.gradnr.dao.UserDao;
@@ -35,19 +36,23 @@ public class WikiService extends Service {
             .build();
 
     public WikiDTO getWiki(int id){
+        Log.d("A",String.valueOf(id));
+
         final WikiDTO[] wikiDTO = {new WikiDTO()};
         WikiDao wikiDao = retrofit.create(WikiDao.class);
         Call<WikiDTO> call = wikiDao.getWiki(id);
+        Log.d("B",call.request().url().toString());
 
         call.enqueue(new Callback<WikiDTO>() {
             @Override
             public void onResponse(Call<WikiDTO> call, Response<WikiDTO> response) {
+                Log.d("Res",response.body().getTitle());
                 wikiDTO[0] = response.body();
             }
 
             @Override
             public void onFailure(Call<WikiDTO> call, Throwable t) {
-
+                Log.d("Err", t.getMessage());
             }
         });
         return wikiDTO[0];

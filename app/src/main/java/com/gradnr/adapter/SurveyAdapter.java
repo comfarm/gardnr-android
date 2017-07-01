@@ -15,7 +15,7 @@ import com.stepstone.stepper.viewmodel.StepViewModel;
  * Created by bri on 7/1/17.
  */
 
-public class SurveyAdapter  extends AbstractFragmentStepAdapter {
+public class SurveyAdapter extends AbstractFragmentStepAdapter {
 
     private static final String CURRENT_STEP_POSITION_KEY = "position";
 

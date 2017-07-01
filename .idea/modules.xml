@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Gardnr.iml" filepath="$PROJECT_DIR$/Gardnr.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradnr-android.iml" filepath="$PROJECT_DIR$/gradnr-android.iml" />
     </modules>
   </component>
 </project>
