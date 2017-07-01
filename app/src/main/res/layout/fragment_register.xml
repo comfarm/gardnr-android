@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -16,12 +17,123 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/register_toolbar">
+        android:layout_below="@id/register_toolbar"
+        android:layout_margin="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            ></LinearLayout>
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_firstName"
+                android:layout_weight="50">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:inputType="textPersonName"
+                    android:drawableLeft="@drawable/account"
+                    android:drawableStart="@drawable/account"
+                    android:drawablePadding="10dp"
+                    android:layout_weight="50"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_lastName"
+                android:layout_weight="50">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName"
+                    android:drawablePadding="10dp"
+                    android:layout_weight="50"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_emailAddress">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:drawableLeft="@drawable/email"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="10dp"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_password">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/lock"
+                android:drawableStart="@drawable/lock"
+                android:drawablePadding="10dp"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_confirmPassword">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confrim Password"
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/lock"
+                android:drawableStart="@drawable/lock"
+                android:drawablePadding="10dp"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/register_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            fancy:fb_text="Register"
+            fancy:fb_textColor="#fff"
+            fancy:fb_defaultColor="@color/colorPrimary"
+            fancy:fb_focusColor="#9CCC65"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:visibility="gone"
+            android:id="@+id/register_withFb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            fancy:fb_text="Register with Facebook"
+            fancy:fb_textColor="#fff"
+            fancy:fb_defaultColor="#3b5998"
+            fancy:fb_focusColor="#FF5C6BC0"
+            fancy:fb_fontIconResource="&#xf082;"
+            fancy:fb_iconPaddingRight="10dp"/>
 
     </LinearLayout>
 

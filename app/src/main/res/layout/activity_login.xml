@@ -57,6 +57,7 @@
             fancy:fb_focusColor="#9CCC65"/>
 
         <mehdi.sakout.fancybuttons.FancyButton
+            android:visibility="gone"
             android:id="@+id/login_withFb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
