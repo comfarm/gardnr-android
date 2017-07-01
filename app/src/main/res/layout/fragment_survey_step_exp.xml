@@ -7,7 +7,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/survey_exp" />
+        android:text="" />
     <RadioGroup
         android:id="@+id/survey_exp_items"
         android:layout_width="wrap_content"

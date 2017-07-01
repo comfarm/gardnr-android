@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".activity.LoginActivity"
             android:theme="@style/LoginTheme"/>
+        <activity android:name=".activity.SurveyActivity"/>
+        <activity android:name=".activity.GardnActivity"/>
     </application>
 
 </manifest>

@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/survey_where" />
+        android:text="" />
 
     <CheckBox
         android:id="@+id/survey_where_item1"
