@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.gradnr.R;
 import com.gradnr.activity.GardnActivity;
+import com.gradnr.adapter.PlantRecommendationAdapter;
 import com.gradnr.service.SurveyService;
 
 import butterknife.BindView;
@@ -26,6 +28,7 @@ public class PlantRecommendationFragment extends DialogFragment implements View.
 
     @BindView(R.id.plant_later)FancyButton plantLaterButton;
     @BindView(R.id.plant_recommendationList)RecyclerView plant_recommendationList;
+    RecyclerView.Adapter adapter;
 
 
     @Nullable
@@ -36,7 +39,9 @@ public class PlantRecommendationFragment extends DialogFragment implements View.
         plantLaterButton.setOnClickListener(this);
 
         SurveyService surveyService = new SurveyService();
-        surveyService.plantRecommendations();
+        adapter = new PlantRecommendationAdapter(surveyService.plantRecommendations(),getActivity());
+        plant_recommendationList.setAdapter(adapter);
+        plant_recommendationList.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         return view;
     }

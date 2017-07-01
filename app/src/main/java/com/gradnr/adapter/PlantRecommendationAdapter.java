@@ -15,6 +15,7 @@ import com.gradnr.R;
 import com.gradnr.dto.PlantRecommendationDTO;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,7 +26,7 @@ import mehdi.sakout.fancybuttons.FancyButton;
  */
 
 public class PlantRecommendationAdapter extends RecyclerView.Adapter<PlantRecommendationAdapter.ViewHolder>{
-    ArrayList<PlantRecommendationDTO> plantRecommendationDTOs;
+    List<PlantRecommendationDTO> plantRecommendationDTOs;
     Context context;
 
     @BindView(R.id.plant_image)ImageView plant_image;
@@ -33,7 +34,7 @@ public class PlantRecommendationAdapter extends RecyclerView.Adapter<PlantRecomm
     @BindView(R.id.plant_description)TextView plant_description;
     @BindView(R.id.plant_select)FancyButton plant_select;
 
-    public PlantRecommendationAdapter(ArrayList<PlantRecommendationDTO> plantRecommendationDTOs, Context context){
+    public PlantRecommendationAdapter(List<PlantRecommendationDTO> plantRecommendationDTOs, Context context){
         this.plantRecommendationDTOs = plantRecommendationDTOs;
         this.context = context;
     }

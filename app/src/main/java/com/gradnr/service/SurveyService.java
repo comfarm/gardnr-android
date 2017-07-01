@@ -6,6 +6,7 @@ import android.widget.Toast;
 import com.gradnr.dao.SurveyDao;
 import com.gradnr.dto.PlantRecommendationDTO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -20,12 +21,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SurveyService {
 
+    List<PlantRecommendationDTO> plantRecommendationDTOList;
     public static final String BASE_URL = "http://172.16.0.72:8091";
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build();
-    public void plantRecommendations(){
+    public List<PlantRecommendationDTO> plantRecommendations(){
+        plantRecommendationDTOList = new ArrayList<>();
         PlantRecommendationDTO plantRecommendationDTO = new PlantRecommendationDTO();
         plantRecommendationDTO.setPlant_id(0);
         SurveyDao surveyDao = retrofit.create(SurveyDao.class);
@@ -33,7 +36,7 @@ public class SurveyService {
         call.enqueue(new Callback<List<PlantRecommendationDTO>>() {
             @Override
             public void onResponse(Call<List<PlantRecommendationDTO>> call, Response<List<PlantRecommendationDTO>> response) {
-                Log.i("Recommendation: ", String.valueOf(response.body()));
+                plantRecommendationDTOList =  response.body();
             }
 
             @Override
@@ -41,6 +44,7 @@ public class SurveyService {
                 Log.d("Fail", t.getMessage());
             }
         });
+        return plantRecommendationDTOList;
     }
 
 }
