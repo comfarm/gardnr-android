@@ -17,9 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class LoginService {
-
     public static final String BASE_URL = "http://172.16.0.72:8091";
-
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())

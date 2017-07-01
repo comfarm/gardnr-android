@@ -15,7 +15,6 @@ import retrofit2.http.POST;
  */
 
 public interface SurveyDao {
-
     @POST("/api/survey")
     Call<List<PlantRecommendationDTO>> plantRecommendations(@Body PlantRecommendationDTO plantRecommendationDTO);
     @POST("survey/")
