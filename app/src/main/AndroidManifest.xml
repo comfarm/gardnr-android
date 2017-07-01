@@ -16,10 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.LoginActivity"
-            android:theme="@style/LoginTheme"/>
-        <activity android:name=".activity.SurveyActivity"/>
-        <activity android:name=".activity.GardnActivity"/>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/LoginTheme" />
+        <activity android:name=".activity.SurveyActivity" />
+        <activity android:name=".activity.GardnActivity" />
+        <activity android:name=".activity.WikiActivity" />
+        <activity android:name=".activity.MilestoneActivity" />
+        <activity android:name=".activity.PlantActivity" />
+
+        <service
+            android:name=".service.WikiService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

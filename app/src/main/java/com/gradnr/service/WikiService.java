@@ -6,7 +6,12 @@ import android.os.IBinder;
 
 import com.gradnr.common.Constants;
 import com.gradnr.dao.UserDao;
+import com.gradnr.dao.WikiDao;
+import com.gradnr.dto.ItemDTO;
 import com.gradnr.dto.UserDTO;
+import com.gradnr.dto.WikiDTO;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -29,39 +34,40 @@ public class WikiService extends Service {
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
-    public Integer register(UserDTO userDTO){
-        final int[] code = new int[1];
-        UserDao userDao = retrofit.create(UserDao.class);
-        Call<UserDTO> call = userDao.register(userDTO);
-        call.enqueue(new Callback<UserDTO>() {
+    public WikiDTO getWiki(int id){
+        final WikiDTO[] wikiDTO = {new WikiDTO()};
+        WikiDao wikiDao = retrofit.create(WikiDao.class);
+        Call<WikiDTO> call = wikiDao.getWiki(id);
+
+        call.enqueue(new Callback<WikiDTO>() {
             @Override
-            public void onResponse(Call<UserDTO> call, Response<UserDTO> response) {
-                code[0] = response.code();
+            public void onResponse(Call<WikiDTO> call, Response<WikiDTO> response) {
+                wikiDTO[0] = response.body();
             }
 
             @Override
-            public void onFailure(Call<UserDTO> call, Throwable t) {
+            public void onFailure(Call<WikiDTO> call, Throwable t) {
 
             }
         });
-        return code[0];
+        return wikiDTO[0];
     }
 
-    public UserDTO[] login(String email){
-        final UserDTO[] userDTO = {new UserDTO()};
-        final UserDao userDao = retrofit.create(UserDao.class);
-        Call<UserDTO> call = userDao.login(email);
-        call.enqueue(new Callback<UserDTO>() {
+    public ItemDTO getItem(int id){
+        final ItemDTO[] itemDTO = {new ItemDTO()};
+        WikiDao wikiDao = retrofit.create(WikiDao.class);
+        Call<ItemDTO> call = wikiDao.getItem(id);
+        call.enqueue(new Callback<ItemDTO>() {
             @Override
-            public void onResponse(Call<UserDTO> call, Response<UserDTO> response) {
-                userDTO[0] = response.body();
+            public void onResponse(Call<ItemDTO> call, Response<ItemDTO> response) {
+                itemDTO[0] = response.body();
             }
 
             @Override
-            public void onFailure(Call<UserDTO> call, Throwable t) {
+            public void onFailure(Call<ItemDTO> call, Throwable t) {
 
             }
         });
-        return userDTO;
+        return itemDTO[0];
     }
 }
