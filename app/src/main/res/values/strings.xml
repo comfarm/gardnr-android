@@ -20,7 +20,7 @@
     <string-array name="survey_where_items">
         <item>Backyard</item>
         <item>Balcony</item>
-        <item>Indors</item>
+        <item>Indoors</item>
         <item>Rooftop</item>
     </string-array>
 
