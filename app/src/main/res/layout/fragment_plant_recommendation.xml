@@ -22,15 +22,19 @@
         <TextView
             android:id="@+id/recommendationText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="1dp"
             android:layout_weight="1"
-            android:text="Here's our recommended plant for you" />
+            android:text="Here's our recommended plant for you"
+            android:textColor="#000"/>
 
-
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/plant_recommendationList"/>
 
         <mehdi.sakout.fancybuttons.FancyButton
             android:id="@+id/plant_later"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:layout_marginTop="15dp"
@@ -40,7 +44,6 @@
             fancy:fb_defaultColor="@color/colorPrimary"
             fancy:fb_focusColor="#9CCC65"
             fancy:fb_iconPaddingRight="10dp"/>
-
     </LinearLayout>
 
 </RelativeLayout>

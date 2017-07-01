@@ -113,7 +113,7 @@ public class RegisterFragment extends DialogFragment{
             LoginService loginService = new LoginService();
 
 
-            if(loginService.register(userDTO) == 201){
+            if(loginService.register(userDTO) == 200){
                 showDialog(true);
             }else{
                 showDialog(false);
