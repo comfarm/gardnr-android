@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context="com.gradnr.activity.WikiActivity">
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.gradnr.fragment.WikiStepsFragment">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/wikiRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+    </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

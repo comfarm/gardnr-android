@@ -1,13 +1,18 @@
 package com.gradnr.dto;
 
+import android.support.v7.widget.RecyclerView;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 
 /**
  * Created by bri on 7/1/17.
  */
 
-public class StepsDTO {
+public class StepsDTO implements Serializable{
+
     @SerializedName("content")
     @Expose
     private String content;

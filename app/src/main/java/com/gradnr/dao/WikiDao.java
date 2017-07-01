@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -17,10 +18,10 @@ import retrofit2.http.Path;
 
 public interface WikiDao {
 
-    @POST("wiki/item/{itemId}")
+    @GET("/api/wiki/item/{itemId}")
     Call<ItemDTO> getItem(@Path("itemId") int itemId);
 
-    @POST("wiki/{wikiId}")
+    @GET("/api/wiki/{wikiId}")
     Call<WikiDTO> getWiki(@Path("wikiId") int wikiId);
 
 }
