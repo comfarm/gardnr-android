@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.gradnr.R;
+import com.gradnr.activity.WikiActivity;
 import com.gradnr.dto.PlantRecommendationDTO;
 
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class PlantRecommendationAdapter extends RecyclerView.Adapter<PlantRecomm
     @Override
     public PlantRecommendationAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.row_plant_recommendations, parent, false);
+        ButterKnife.bind(this,  view);
         return new ViewHolder(view);
     }
 
@@ -54,9 +56,10 @@ public class PlantRecommendationAdapter extends RecyclerView.Adapter<PlantRecomm
         plant_select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle args = new Bundle();
-                args.putInt("plant_id", plantRecommendationDTOs.get(position).getPlant_id());
-//                Intent intent = new Intent(view.getContext(), )
+//                Bundle args = new Bundle();
+//                args.putInt("plant_id", plantRecommendationDTOs.get(position).getPlant_id());
+////                Intent intent = new Intent(view.getContext(), )
+                context.startActivity(new Intent(view.getContext(), WikiActivity.class));
             }
         });
     }

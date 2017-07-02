@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gradnr.activity.MilestoneActivity">
+    tools:context="com.gradnr.activity.ProgressActivity">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/milestone_milestoneLists"/>
+        android:id="@+id/progress_progressLists"/>
 
 </RelativeLayout>
