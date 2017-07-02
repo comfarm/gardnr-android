@@ -128,4 +128,8 @@ public class PlantActivity extends AppCompatActivity implements View.OnClickList
 ////        Bitmap bitmap = BitmapFactory.decodeFile(filePath);
 ////        plantImageButton.setImageBitmap(bitmap);
     }
+
+    public void goToGardnr(View view){
+        startActivity(new Intent(this, GardnActivity.class));
+    }
 }

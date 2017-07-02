@@ -32,6 +32,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
+            android:background="#eee"
             app:srcCompat="@drawable/plant" />
 
         <android.support.design.widget.TextInputLayout
@@ -67,7 +68,8 @@
             fancy:fb_text="Save"
             fancy:fb_textColor="#fff"
             fancy:fb_defaultColor="@color/colorPrimary"
-            fancy:fb_focusColor="#9CCC65"/>
+            fancy:fb_focusColor="#9CCC65"
+            android:onClick="goToGardnr"/>
 
     </LinearLayout>
 </RelativeLayout>

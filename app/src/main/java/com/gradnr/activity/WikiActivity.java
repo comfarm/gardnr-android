@@ -1,11 +1,13 @@
 package com.gradnr.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 
 import com.gradnr.R;
 import com.gradnr.adapter.WikiStepsAdapter;
@@ -61,5 +63,9 @@ public class WikiActivity extends AppCompatActivity {
 
 //        Log.d("test2",w.getTitle());
 
+    }
+
+    public void goToPlants(View view){
+        startActivity(new Intent(this, PlantActivity.class));
     }
 }
